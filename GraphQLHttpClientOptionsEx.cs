@@ -1,5 +1,6 @@
 ﻿using GraphQL;
 using GraphQL.Client.Http;
+using GraphQL.Client.Http.Websocket;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -82,6 +83,8 @@ namespace SubTest
                 + "&payload=e30="
             );
 
+            options.WebSocketProtocol = WebSocketProtocols.GRAPHQL_WS;
+
             // TEST PRE-PROCESS 1
             // set pre-processor to add authentication HTTP header to request
             //options.PreprocessRequest = (request, client) => {
@@ -127,7 +130,7 @@ namespace SubTest
             // TEST PRE-PROCESS 3 (edom18)
             //options.PreprocessRequest = (req, client) =>
             //{
-            //    GraphQLHttpRequest result = new AuthorizedAppSyncHttpRequest(req, Constants.GQLServerAPIKey)
+            //    GraphQLHttpRequest result = new AuthorizedAppSyncHttpRequest(req, apiKey)
             //    {
             //        ["data"] = JsonConvert.SerializeObject(req),
             //        ["extensions"] = new

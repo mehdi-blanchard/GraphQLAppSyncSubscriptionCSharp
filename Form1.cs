@@ -61,6 +61,7 @@ namespace SubTest
             try
             {
                 await _rtGQLConnect.InitializeConnection();
+                labelMessage.Text = "InitializeWebsocketConnection Successful!";
             }
             catch (Exception ex)
             {
@@ -82,10 +83,14 @@ namespace SubTest
                 _rtGQLConnect.GQLClient.CreateSubscriptionStream<CreateTodoSubscriptionResult>(request).Subscribe(create =>
                 {
                     labelMessage.Text = "Notification: " + JsonSerializer.Serialize(create);
-                }, 
+                },
                 error =>
                 {
                     labelMessage.Text = "SUBSCRIPTION ERROR: " + error.Message;
+                },
+                () =>
+                {
+                    labelStatus.Text = "Completed.";
                 });
                 labelMessage.Text = "The Subscription has been registered";
             }

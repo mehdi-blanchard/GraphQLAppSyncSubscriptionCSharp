@@ -38,6 +38,8 @@
             this.labelQuery = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +109,7 @@
             this.groupBox1.Controls.Add(this.buttonGetTodos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 142);
+            this.groupBox1.Size = new System.Drawing.Size(938, 142);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Query";
@@ -132,6 +134,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelStatus);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.buttonInitializeConnection);
             this.groupBox2.Controls.Add(this.buttonSubscribeTodo);
             this.groupBox2.Controls.Add(this.labelMessage);
@@ -139,16 +143,34 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(21, 177);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(767, 214);
+            this.groupBox2.Size = new System.Drawing.Size(929, 214);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "WebSocket";
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Location = new System.Drawing.Point(89, 180);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(16, 13);
+            this.labelStatus.TabIndex = 9;
+            this.labelStatus.Text = "...";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Status:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 405);
+            this.ClientSize = new System.Drawing.Size(964, 405);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -172,6 +194,8 @@
         private System.Windows.Forms.Label labelQuery;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.Label label4;
     }
 }
 
